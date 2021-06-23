@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .interpolation {
   display: grid;
   align-items: center;
