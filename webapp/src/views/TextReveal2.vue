@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Revelação de texto</h1>
+    <h1>Revelação de texto 2</h1>
   </div>
 </template>
 
