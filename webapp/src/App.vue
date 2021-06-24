@@ -10,6 +10,7 @@
     <TextReveal v-if="currentPage === 3" />
     <TextReveal2 v-if="currentPage === 4" />
     <TextReveal3 v-if="currentPage === 5" />
+    <LandingPageAnimation v-if="currentPage === 6" />
   </div>
 </template>
 
@@ -20,8 +21,9 @@ import DownloadArrow from '@/views/DownloadArrow.vue'
 import TextReveal from '@/views/TextReveal.vue'
 import TextReveal2 from '@/views/TextReveal2.vue'
 import TextReveal3 from '@/views/TextReveal3.vue'
+import LandingPageAnimation from '@/views/LandingPageAnimation.vue'
 
-const totalPages = 6;
+const totalPages = 7;
 
 export default {
   name: 'App',
@@ -33,6 +35,7 @@ export default {
     TextReveal,
     TextReveal2,
     TextReveal3,
+    LandingPageAnimation,
   },
 
   data: () => ({
@@ -57,6 +60,7 @@ export default {
   display: flex;
   top: 10px;
   left: 10px;
+  z-index: 10000;
   background: #FFFFFFAA;
   border-radius: 0.5rem;
   position: fixed;
