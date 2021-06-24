@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Revelação de texto</h1>
+    <h1>Revelação de texto 1</h1>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
 h1 {
   position: relative;
   color: #444444;
-  animation: has-reveal-text 750ms linear;
+  animation: fade 1ms 500ms backwards;
 }
 
 h1::after {
@@ -36,7 +36,7 @@ h1::after {
   width: 100%;
   height: 100%;
   transform-origin: center right;
-  animation: has-reveal 750ms linear forwards;
+  animation: has-reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 
 @keyframes has-reveal {
@@ -45,11 +45,8 @@ h1::after {
   }
 }
 
-@keyframes has-reveal-text {
+@keyframes fade {
   from {
-    color: transparent;
-  }
-  to {
     color: transparent;
   }
 }
