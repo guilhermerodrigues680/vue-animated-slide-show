@@ -6,13 +6,16 @@
     </div>
     <Interpolation v-if="currentPage === 0" />
     <GradientBackground v-if="currentPage === 1" />
+    <DownloadArrow v-if="currentPage === 2" />
   </div>
 </template>
 
 <script>
 import Interpolation from '@/views/Interpolation.vue'
 import GradientBackground from '@/views/GradientBackground.vue'
-const totalPages = 2;
+import DownloadArrow from '@/views/DownloadArrow.vue'
+
+const totalPages = 3;
 
 export default {
   name: 'App',
@@ -20,6 +23,7 @@ export default {
   components: {
     Interpolation,
     GradientBackground,
+    DownloadArrow,
   },
 
   data: () => ({
