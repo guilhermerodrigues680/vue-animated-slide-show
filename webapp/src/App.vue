@@ -7,6 +7,7 @@
     <Interpolation v-if="currentPage === 0" />
     <GradientBackground v-if="currentPage === 1" />
     <DownloadArrow v-if="currentPage === 2" />
+    <TextReveal v-if="currentPage === 3" />
   </div>
 </template>
 
@@ -14,8 +15,9 @@
 import Interpolation from '@/views/Interpolation.vue'
 import GradientBackground from '@/views/GradientBackground.vue'
 import DownloadArrow from '@/views/DownloadArrow.vue'
+import TextReveal from '@/views/TextReveal.vue'
 
-const totalPages = 3;
+const totalPages = 4;
 
 export default {
   name: 'App',
@@ -24,10 +26,11 @@ export default {
     Interpolation,
     GradientBackground,
     DownloadArrow,
+    TextReveal,
   },
 
   data: () => ({
-    currentPage: 1,
+    currentPage: 0,
   }),
 
   methods: {
