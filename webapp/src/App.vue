@@ -9,6 +9,7 @@
     <DownloadArrow v-if="currentPage === 2" />
     <TextReveal v-if="currentPage === 3" />
     <TextReveal2 v-if="currentPage === 4" />
+    <TextReveal3 v-if="currentPage === 5" />
   </div>
 </template>
 
@@ -18,8 +19,9 @@ import GradientBackground from '@/views/GradientBackground.vue'
 import DownloadArrow from '@/views/DownloadArrow.vue'
 import TextReveal from '@/views/TextReveal.vue'
 import TextReveal2 from '@/views/TextReveal2.vue'
+import TextReveal3 from '@/views/TextReveal3.vue'
 
-const totalPages = 5;
+const totalPages = 6;
 
 export default {
   name: 'App',
@@ -30,6 +32,7 @@ export default {
     DownloadArrow,
     TextReveal,
     TextReveal2,
+    TextReveal3,
   },
 
   data: () => ({
