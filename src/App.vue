@@ -4,38 +4,20 @@
       <span @click="previousPage()">&lt;</span>
       <span @click="nextPage()">&gt;</span>
     </div>
-    <Interpolation v-if="currentPage === 0" />
-    <GradientBackground v-if="currentPage === 1" />
-    <DownloadArrow v-if="currentPage === 2" />
-    <TextReveal v-if="currentPage === 3" />
-    <TextReveal2 v-if="currentPage === 4" />
-    <TextReveal3 v-if="currentPage === 5" />
-    <LandingPageAnimation v-if="currentPage === 6" />
+    <LandingPage />
   </div>
 </template>
 
 <script>
-import Interpolation from '@/views/Interpolation.vue'
-import GradientBackground from '@/views/GradientBackground.vue'
-import DownloadArrow from '@/views/DownloadArrow.vue'
-import TextReveal from '@/views/TextReveal.vue'
-import TextReveal2 from '@/views/TextReveal2.vue'
-import TextReveal3 from '@/views/TextReveal3.vue'
-import LandingPageAnimation from '@/views/LandingPageAnimation.vue'
+import LandingPage from '@/views/LandingPage.vue'
 
-const totalPages = 7;
+const totalPages = 1;
 
 export default {
   name: 'App',
 
   components: {
-    Interpolation,
-    GradientBackground,
-    DownloadArrow,
-    TextReveal,
-    TextReveal2,
-    TextReveal3,
-    LandingPageAnimation,
+    LandingPage,
   },
 
   data: () => ({
