@@ -25,18 +25,29 @@ h3, p {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   grid-template-rows: 4fr 1fr 1fr;
   place-items: center;
   height: 40%;
   width: 50%;
+  position: relative;
+  user-select: none;
+}
+
+/* disable select */
+.wrapper::before {
+  content: "";
+  display: block;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .photo {
   height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: contain;
-  border-radius: 0.5rem;
-  vertical-align: middle;
+  filter: drop-shadow(0px 0px 1px rgb(224, 195, 252, 0.3)) drop-shadow(0px 0px 5px rgb(224, 195, 252, 0.3));
 }
 </style>
