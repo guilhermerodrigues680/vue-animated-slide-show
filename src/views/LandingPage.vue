@@ -1,7 +1,24 @@
 <template>
   <div class="page-container">
     <transition
-      v-if="hasStarted"
+      v-if="hasStarted && currentImage === 0"
+      appear
+      name="custom-classes-transition"
+      enter-active-class="animation-maxzoomin"
+      leave-active-class="animate__animated animate__rotateOut"
+      mode="out-in"
+      @after-enter="afterEnter"
+      @after-appear="afterEnter"
+    >
+      <ImageCard2 class="image-card"
+        :imgurl="imageList[currentImage].imgUrl"
+        :title="imageList[currentImage].title"
+        :text="imageList[currentImage].text"
+        :key="currentImage"
+      />
+    </transition>
+    <transition
+      v-else-if="hasStarted"
       appear
       name="custom-classes-transition"
       enter-active-class="animate__animated animate__fadeInDown"
@@ -39,6 +56,7 @@
 
 <script>
 import ImageCard from "@/components/ImageCard.vue";
+import ImageCard2 from "@/components/ImageCard2.vue";
 import Vue from 'vue';
 
 export default {
@@ -46,6 +64,7 @@ export default {
 
   components: {
     ImageCard,
+    ImageCard2,
   },
 
   data: () => ({
@@ -90,6 +109,7 @@ export default {
 
       try {
         await audio.play();
+        // audio.pause(); // FIXME somente para desenvolvimento
       } catch (error) {
         console.error(error);
         alert(error.message);
@@ -190,5 +210,21 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+.animation-maxzoomin {
+  animation: teste 5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes teste {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

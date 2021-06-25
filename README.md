@@ -28,9 +28,15 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - https://easings.net/
 - https://cubic-bezier.com
 - https://animista.net/
+- clip path maker
+- figma
+- convert absololute clipt path to relative
 
 <!-- https://www.chosic.com/download-audio/?t=25817&tag=Romantic -->
 Where Will I Go? by Ron Gelinas Chillout Lounge | https://soundcloud.com/atmospheric-music-portal
 Music promoted by https://www.chosic.com
 Creative Commons Attribution 3.0 Unported License
 https://creativecommons.org/licenses/by/3.0/deed.en_US
+
+<!-- clip part heart -->
+<!-- clip evento ao acabar musica ou reiniciar musica -->
